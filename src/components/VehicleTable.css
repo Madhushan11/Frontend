@@ -1,0 +1,24 @@
+/* VehicleTable.css */
+
+.vehicle-image {
+    width: 100px;
+    height: auto;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .vehicle-image {
+      width: 50px;
+    }
+  
+    .action-buttons button {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+  

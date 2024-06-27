@@ -1,0 +1,120 @@
+.black-bar {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  background-color: transparent;
+  z-index: 999; 
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: #060606;
+  padding: 6px;
+  border-radius: 0; 
+  width: 100%; 
+  margin: 0 auto;
+  height: 30px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.logo img {
+  height: 50px; 
+  margin-right: 0;
+  margin-left: 0;
+  font-weight: bold;
+}
+
+.nav-links {
+  font-size: 16px;
+}
+.nav-links ul {
+  display: flex;
+  gap: 8px; 
+  list-style: none;
+}
+
+.nav-links ul li {
+  margin-right: 10px;
+}
+
+.nav-links ul li a {
+  text-decoration: none; 
+  color: rgb(250, 245, 245);
+  font-weight: bold; 
+}
+
+.search-bar {
+  height: 50%;
+  margin-top: -0.5%;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  width:35%;
+}
+
+.search-bar input[type="text"] {
+  padding: 5px;
+  margin-left: 5%;
+  width:100%;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: rgba(76, 74, 74, 0.5);
+}
+
+.search-input::placeholder {
+  color: #fff; /* Semi-transparent placeholder color */
+}
+
+.search-icon {
+  margin-top: 5%;
+  margin-left: -5%;
+  width: 33px;
+  height: 25px;
+  cursor: pointer;
+  color: rgb(250, 245, 245);
+  /*background: url('./Images/search-icon.png') center/cover no-repeat;*/
+}
+.search-button {
+  background-color: transparent;
+  margin-top: 0;
+  margin-right: 5%;
+  margin-left: -8%;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Styles for medium and small screens */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px 20px; /* Adjust padding */
+    height: auto; /* Auto height */
+  }
+  
+  .logo img {
+    margin: 10px 0; /* Adjust margin */
+  }
+  
+  .nav-links {
+    margin-left: 0; /* Reset margin */
+  }
+  
+  .nav-links ul {
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Adjust gap between items */
+  }
+  
+  .nav-links ul li {
+    margin-right: 0; /* Reset margin */
+  }
+  
+  .search-bar {
+    margin: 10px 0; /* Adjust margin */
+  }
+}

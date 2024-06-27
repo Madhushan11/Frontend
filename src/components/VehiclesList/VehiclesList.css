@@ -1,0 +1,5 @@
+.vehicle-image img {
+    width: 100px;
+    height: 100px; /* This will maintain the aspect ratio */
+  }
+  

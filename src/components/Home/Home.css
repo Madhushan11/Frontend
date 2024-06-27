@@ -1,0 +1,481 @@
+/* Home.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.btn{
+  width:150px;
+  margin-right: 10px;
+}
+/* Logo styles */
+.logo1 {
+  display: inline-block;
+}
+
+.logo1 img {
+  height: 80px; /* Adjust as needed */
+  animation: shineEffect 3s infinite;
+}
+
+@keyframes shineEffect {
+  0% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.5);
+    transform: scale(1.1);
+  }
+  100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+.background-image-container {
+  position: relative;
+  width: 99vw; /* Full viewport width */
+  height: calc(100vh - 70px); /* Full viewport height minus the top bar height */
+  background-size: contain; /* Ensure the entire image is visible */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No repeat */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px; /* Adjust to match the height of the top bar */
+  animation: changeBg 18s infinite; /* Adjust animation duration as needed */
+}
+
+.background-text {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4vw;
+  color: rgb(249, 246, 246);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 0; /* Add some padding */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a dark shadow */
+}
+
+@media (max-width: 768px) {
+  .background-text {
+    bottom: 30%;
+    font-size: 4vw; /* Adjust font size for smaller screens */
+    padding: 8px 0; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-text {
+    bottom: 40%;
+    font-size: 6vw; /* Further adjust font size for very small screens */
+    padding: 6px 0; /* Further adjust padding for very small screens */
+  }
+}
+
+
+.background-text-item {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+.background-text-content {
+  margin: 0;
+  color: white;
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@keyframes changeBg {
+  0% { background-image: url('./images/front1.png'); }
+  33% { background-image: url('./images/front2.png'); }
+  66% { background-image: url('./images/front3.png'); }
+  100% { background-image: url('./images/front1.png'); } /* Loop back to the first image */
+}
+
+@media (max-width: 768px) {
+  .background-image-container {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+}
+
+/* About section styles */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 50px; /* Add space for the fixed top bar */
+}
+
+.about-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%; /* Ensure the content takes full width */
+  max-width: 1200px; /* Limit the max width for readability */
+  margin-bottom: 20px; /* Space between content and new text */
+}
+
+.about-content {
+  flex: 1;
+  color: black;
+  margin-right: 50px; /* Space between text and image */
+  margin-top: 10px;
+}
+
+.about-section h2 {
+  margin-top: 50;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  color: black;
+}
+
+.about-section img {
+  max-width: 50%;
+  border-radius: 10px;
+}
+
+.new-textbox {
+  max-width: 800px;
+  text-align: center;
+  color: rgb(50, 4, 100);
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; /* Ensure the highlight doesn't overflow */
+  font-weight: bold;
+}
+
+.new-textbox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgb(108, 107, 109), transparent);
+  animation: highlight 5s infinite;
+}
+
+@keyframes highlight {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.author{
+  flex: 1;
+  color: black;
+}
+
+/* Features section styles */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #230529;
+  color: #fff;
+  text-align: center;
+}
+.features h2 {
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  color: #f6f5f5;
+  text-align: center;
+}
+.feature-box {
+  flex: 1 1 calc(33.333% - 20px);
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+}
+.feature-image {
+  max-width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+}
+.feature-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.feature-content p {
+  margin-top: 10px;
+  color: black;
+}
+@media (max-width: 768px) {
+  .feature-box {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .feature-box {
+    flex: 1 1 100%;
+  }
+}
+
+/* Shining animation effect */
+@keyframes shine {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+}
+
+/* Add the shine class to each feature box */
+.feature-box.shine {
+  animation: shine 3s infinite;
+}
+
+.rental-fleets {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  color: black;
+  position: relative;
+  overflow: hidden; /* Ensure the section hides overflowing content */
+}
+
+.rental-fleets h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  color: black;
+}
+
+.fleet-carousel {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap to fleet items */
+}
+
+.fleet {
+  flex: 0 0 auto; /* Ensure items do not shrink or grow */
+  margin: 0 10px; /* Margin between items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(113, 112, 112);
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  scroll-snap-align: center; /* Snap items to the center */
+}
+
+.fleet img {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.contact-us {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to new lines */
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;  
+  text-align: center;
+  margin-top: 50px;
+}
+
+.contact-info {
+  flex: 1 1 300px; /* Allow flexibility in width */
+  padding: 20px;
+  text-align: left;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.contact-info h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  opacity: 0; /* Initially hide the paragraphs */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.contact-info .email-link {
+  text-decoration: underline; /* Underline the email link */
+  color: blue; /* Change the color to blue for better visibility */
+}
+
+.animate-drop {
+  animation: slideAnimation 6s linear infinite; /* Adjust animation duration and timing */
+}
+
+@keyframes slideAnimation {
+  0%, 100% {
+    transform: translateX(-100%); /* Start off the left edge */
+    opacity: 0;
+  }
+  10%, 90% {
+    transform: translateX(0); /* Slide to the normal position */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%); /* Move off to the right edge */
+    opacity: 0;
+  }
+}
+
+.contact-image {
+  flex: 1 1 300px; /* Allow flexibility in width */
+  text-align: center;
+  margin-bottom: -50px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-us {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .contact-info {
+    text-align: center; /* Center text for smaller screens */
+    align-items: center; /* Center align items */
+  }
+
+  .contact-info h2 {
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+
+  .contact-info p {
+    text-align: center; /* Center text for smaller screens */
+  }
+}
+
+
+/* Reviews section styles */
+.reviews {
+  padding: 20px;
+  background-color: #6d696d;
+  text-align: center;
+  color: black;
+}
+.reviews h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-left: 80px;
+  color: black;
+}
+.review-box {
+  display: inline-block;
+  width: 250px; /* Adjust the width as needed */
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review {
+  margin-bottom: 10px;
+}
+
+.review p {
+  margin: 0;
+  font-style: italic;
+}
+
+.review-name {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}

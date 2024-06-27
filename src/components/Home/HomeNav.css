@@ -1,0 +1,127 @@
+/* HomeNav.css */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #090808;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 3px solid #ffffff; /* Bottom border */
+}
+
+/* Logo styles */
+.logo1 {
+  display: inline-block;
+}
+
+.logo1 img {
+  height: 80px; /* Adjust as needed */
+  animation: shineEffect 3s infinite;
+}
+
+@keyframes shineEffect {
+  0% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.5);
+    transform: scale(1.1);
+  }
+  100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+}
+
+/* Navigation styles */
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 150px;
+  margin-right: 10px;
+  color: navy;
+}
+
+/* Mobile menu icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #090808;
+    padding: 10px 0;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation a {
+    margin: 10px 0;
+  }
+  /* Base styles for the button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px; /* Padding inside the button */
+  margin-right: 10px; /* Margin to separate it from other elements */
+  text-align: center; /* Center align the text */
+  font-size: 14px; /* Font size */
+  font-family: Arial, sans-serif; /* Font family */
+  background-color: #007bff; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* Remove underline if it's a link */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Additional styling for smaller screens */
+@media (max-width: 768px) {
+  .btn {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 8px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}

@@ -1,0 +1,158 @@
+
+/* Import font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.logo {
+    display: block;
+    margin: 2px 140px auto;
+    background: transparent;
+    width: 35%; /* Adjust the width as needed */
+    height: 25%; /* Maintain aspect ratio */
+    margin-bottom: -8%;
+    opacity: 1;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(41, 40, 40, 0.2); 
+}
+
+.wrapper{
+    margin-top: 1%;
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    opacity: 2;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+    color: rgb(249, 244, 244);
+    border-radius: 25px;
+    padding: 2px 1px 5px;
+    /*border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+    border-radius: 10px;*/
+}
+
+.wrapper h1{
+    font-size: 32px;
+    font-weight: 600px;
+    text-align:  center;
+    margin: 15px 10px ;
+    margin-left: 20px;
+  }
+
+.wrapper .input-box {
+    align-content: center;
+    position: relative;
+    width: 80%;
+    height: 40px;
+    margin: 15px 0;
+    padding: 0 1px 0 0;
+    margin-left: 40px;
+}
+
+.input-box input {
+    align-content: center;
+    width: 93%;
+    height: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 0;
+    padding: 0 14px;
+}
+
+.input-box input::placeholder {
+    padding: 0px;
+    color: #fff;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.wrapper .forgot{
+    display: flex;
+    margin-left: 1%;
+    margin-top: -2%;
+    font-size: 12px;
+    margin-bottom: 3%;
+}
+
+.forgot label input{
+    accent-color: #fff;
+}
+
+.forgot a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 50px;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+    color:rgb(57, 54, 234);
+}
+
+.wrapper button {
+    align-content: center;
+    margin-left: 45px;
+    margin-top: 2%;
+    width:80%;
+    height: 32px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0, .1);
+    cursor: pointer;
+    font-size: 15px;
+    color: #050505;
+    font-weight: 700;
+}
+
+.wrapper button:hover {
+    background: rgb(154, 153, 153);  /* Change background color to blue */
+    color: #fff;                 /* Optionally change text color to white for better contrast */
+    text-decoration: underline;  /* Optional: keep the underline effect */
+}
+
+.wrapper button:active {
+    background: rgb(154, 153, 153);  
+    color: #fff;                 
+}
+.wrapper .button {
+    font-weight: 700;
+}
+
+.wrapper .Signup-link{
+    font-size:  14px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.Signup-link p {
+    color: #f8f7f7;
+    font-size: 12px;
+    margin-bottom: 5%;
+    text-decoration: none;
+}
+
+.Signup-link a {
+    color: #f9f5f5;
+    font-weight: 10px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.Signup-link p a:hover {
+    text-decoration: underline;
+    color:rgb(57, 54, 234);
+}

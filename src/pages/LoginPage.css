@@ -1,0 +1,9 @@
+
+
+/* Responsive styles */
+body.login-page {
+    background: url("../components/images/classic_cover.jpg") no-repeat;
+    background-size: cover;
+    background-position: justify;
+    padding: 5px 294px 5px;
+}

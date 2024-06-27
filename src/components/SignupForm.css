@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0 0 10px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: url("./images/classic_cover.jpg")
+    no-repeat;*/
+    background-size: cover;
+    background-position: center;
+}
+
+body.signup-page {
+    background: url("../components/images/signup_cover.jpg") no-repeat;
+    background-size: cover;
+    background-position: justify;
+    /*padding: 5px 294px 5px;*/
+}
+.logo {
+    display: block;
+    margin: 2px 155px auto;
+    background: transparent;
+    width: 30%; /* Adjust the width as needed */
+    height: 25%; /* Maintain aspect ratio */
+    margin-bottom: -9%;
+    border-radius: 15px;
+    opacity: 2;
+    box-shadow: 0 4px 8px rgba(36, 35, 35, 0.2); 
+}
+
+.signup-wrapper{
+    justify-content: center;
+    margin-top: 1%;
+    width: 420px;
+    height: 75%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    opacity: 1;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+    color: rgb(246, 244, 244);
+    border-radius: 25px;
+    padding: 2px 1px 5px;
+    /*border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+    border-radius: 10px;*/
+}
+
+.signup-wrapper h1{
+    font-size: 30px;
+    font-weight: 600px;
+    text-align:  center;
+    margin: 35px 10px 10px 10px;
+    margin-bottom: -1%;
+    margin-left: 20px;
+  }
+
+.signup-wrapper .signup-input-box {
+    align-content: center;
+    position: relative;
+    width: 90%;
+    height: 19px;
+    margin: 25px 0;
+    padding: 0 1px 0 0;
+    margin-left: 40px;
+}
+
+.signup-input-box input {
+    width: 82%;
+    height: 98%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 15px 10px;
+}
+
+.signup-input-box input::placeholder {
+    padding: 0px;
+    color: #fff;
+}
+
+.signup-input-box .icon {
+    position: absolute;
+    top: 90%;
+    right:13%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.signup-wrapper .terms {
+    display: flex;
+    align-items: center;
+    margin: 25px 20px 5px 0;
+    font-size: 12px;
+    margin-left: 12%;
+}
+
+.signup-wrapper .terms input {
+    margin-right: 10px;
+}
+
+.signup-wrapper .terms a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.signup-wrapper .terms a:hover {
+    text-decoration: underline;
+    color: rgb(57, 54, 234);
+}
+
+.signup-wrapper .terms-label {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 5%;
+}
+
+
+.signup-wrapper .signup-buttontype {
+    align-content: center;
+    margin-left: 45px;
+    margin-top: 1.5%;
+    width:80%;
+    height: 32px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0, .1);
+    cursor: pointer;
+    font-size: 15px;
+    color: #050505;
+    font-weight: 700;
+}
+
+.signup-wrapper button:hover {
+    background: rgb(154, 153, 153);  /* Change background color to blue */
+    color: #fff;                 /* Optionally change text color to white for better contrast */
+    text-decoration: underline;  /* Optional: keep the underline effect */
+}
+
+.signup-wrapper button:active {
+    background: rgb(154, 153, 153);  
+    color: #fff;                 
+}
+.signup-wrapper .button {
+    font-weight: 700;
+}
+
+.signup-wrapper .login-link{
+    font-size:  16px;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.login-link p {
+    color: #f8f7f7;
+    font-size: 13px;
+    margin-top: 0.5%;
+    margin-bottom: 3.5%;
+    text-decoration: none;
+}
+
+.login-link a {
+    color: #f9f5f5;
+    font-weight: 16px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.login-link p a:hover {
+    text-decoration: underline;
+    color:rgb(57, 54, 234);
+}
+
+
