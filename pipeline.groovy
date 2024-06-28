@@ -12,23 +12,32 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t shakila/frontend .'
-                }
-            }
-        }
-        stage('Run Docker Container') {
-            steps {
-                script {
-                    // Stop any running containers with the same name
-                    
-                    // Run the new container
-                    sh 'docker run -d -p 5001:3000 shakila/frontend'
+                    sh 'docker build -t umeshgayashan/frontend .'
                 }
             }
         }
         stage('Show Running Containers') {
             steps {
                 sh 'docker ps'
+            }
+        }
+        stage('Login to Docker Hub') {
+            steps {
+                withCredentials([string(credentialsId: 'dockerhub_password', variable: 'Dockerhub')]) {
+                    script {
+                        sh "docker login -u umeshgayashan -p ${Dockerhub}"
+                    }
+                }
+            }
+        }
+        stage('Push Image') {
+            steps {
+                script {
+                    retry(3) {
+                        echo 'Pushing Docker image to Docker Hub...'
+                        sh 'docker push umeshgayashan/frontend'
+                    }
+                }
             }
         }
     }
