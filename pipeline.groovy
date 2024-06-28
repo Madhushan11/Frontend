@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t umeshgayashan/frontend .'
+                    sh 'docker build -t sakilamadhushanabc585/frontend .'
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Run the new container
-                    sh 'docker run -d -p 5001:3000 umeshgayashan/frontend'
+                    sh 'docker run -d -p 5001:3000 sakilamadhushanabc585/frontend'
 
 
                 }
@@ -33,9 +33,9 @@ pipeline {
         }
         stage('Login to Docker Hub') {
             steps {
-                withCredentials([string(credentialsId: 'dockerhub_password', variable: 'Dockerhub')]) {
+                withCredentials([string(credentialsId: 'dockerhub_password1', variable: 'Dockerhub1')]) {
                     script {
-                        sh "docker login -u umeshgayashan -p ${Dockerhub}"
+                        sh "docker login -u sakilamadhushanabc585 -p ${Dockerhub1}"
                     }
                 }
             }
@@ -45,7 +45,7 @@ pipeline {
                 script {
                     retry(3) {
                         echo 'Pushing Docker image to Docker Hub...'
-                        sh 'docker push umeshgayashan/frontend'
+                        sh 'docker push sakilamadhushanabc585/frontend'
                     }
                 }
             }
