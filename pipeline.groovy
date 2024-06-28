@@ -16,14 +16,14 @@ pipeline {
                 }
             }
         }
-        stage('Show Running Containers') {
+        stage('Run Docker Container') {
             steps {
                 script {
-                    // Stop any running containers with the same name
-
                     // Run the new container
                     sh 'docker run -d -p 5001:3000 umeshgayashan/frontend'
-                sh 'docker ps'
+
+
+                }
             }
         }
         stage('Show Running Containers') {
