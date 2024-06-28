@@ -23,7 +23,7 @@ export default function LoginForm(){
     return (
     <div className='wrapper'>
             <img src={logo}  className="logo" />
-            <h1>Login</h1>
+            <h1>LOGIN</h1>
         <form onSubmit={handleLogin}>
             <div className="input-box">
             <input 
