@@ -18,6 +18,16 @@ pipeline {
         }
         stage('Show Running Containers') {
             steps {
+                script {
+                    // Stop any running containers with the same name
+
+                    // Run the new container
+                    sh 'docker run -d -p 5001:3000 umeshgayashan/frontend'
+                sh 'docker ps'
+            }
+        }
+        stage('Show Running Containers') {
+            steps {
                 sh 'docker ps'
             }
         }
